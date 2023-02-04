@@ -1,5 +1,4 @@
-﻿
-using LanguagePopularity;
+﻿using LanguagePopularity.Reddit;
 
 while (true)
 {
@@ -17,6 +16,7 @@ while (true)
                 subscribers = "0";
             }
 
+            Console.WriteLine($"\n{subreddit.Data.Title}");
             Console.WriteLine($"{subscribers} Subscribers\n");
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System.Text.Json;
+using LanguagePopularity.Reddit.Model;
 
-namespace LanguagePopularity
+namespace LanguagePopularity.Reddit
 {
     internal static class RedditAPI
     {
@@ -23,6 +24,7 @@ namespace LanguagePopularity
                 else
                 {
                     Console.WriteLine(e.Message);
+                    Console.WriteLine(e.StackTrace?.ToString());
                 }
             }
 
