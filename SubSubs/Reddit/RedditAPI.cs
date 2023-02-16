@@ -1,7 +1,7 @@
-﻿using System.Text.Json;
-using LanguagePopularity.Reddit.Model;
+﻿using SubSubs.Reddit.Model;
+using System.Text.Json;
 
-namespace LanguagePopularity.Reddit
+namespace SubSubs.Reddit
 {
     internal static class RedditAPI
     {

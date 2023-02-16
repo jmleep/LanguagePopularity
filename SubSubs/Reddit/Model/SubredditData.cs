@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace LanguagePopularity.Reddit
+namespace SubSubs.Reddit
 {
     public class SubredditData
     {

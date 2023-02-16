@@ -1,4 +1,4 @@
-﻿using LanguagePopularity.Reddit;
+﻿using SubSubs.Reddit;
 
 while (true)
 {
@@ -7,7 +7,8 @@ while (true)
 
     if (inputSubreddit != null)
     {
-        var subreddit = await RedditAPI.RetrieveSubredditDataAsync(inputSubreddit);
+        var cleanedUpInput = inputSubreddit.Trim().ToLower();
+        var subreddit = await RedditAPI.RetrieveSubredditDataAsync(cleanedUpInput);
         if (subreddit != null)
         {
             var subscribers = subreddit.Data.Subscribers.ToString("#,###");
@@ -17,6 +18,7 @@ while (true)
             }
 
             Console.WriteLine($"\n{subreddit.Data.Title}");
+            Console.WriteLine($"\nhttps://reddit.com/r/{cleanedUpInput}");
             Console.WriteLine($"{subscribers} Subscribers\n");
         }
     }
